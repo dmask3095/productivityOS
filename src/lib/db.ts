@@ -1,8 +1,6 @@
 import { neon } from '@neondatabase/serverless';
 
-const connectionString = process.env.DATABASE_URL!;
-
-export const sql = neon(connectionString);
+export const sql = neon(process.env.DATABASE_URL || 'postgresql://build-placeholder/db');
 
 export async function initSchema() {
   await sql`
