@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Program Files/**)",
+      "Bash(where.exe node *)",
+      "Bash(cmd.exe /c \"node -v\")",
+      "Bash(cmd.exe /c \"where node\")",
+      "Bash(cmd.exe /c \"where npm\")",
+      "Read(//c/Program Files \\(x86\\)/**)",
+      "Read(//c/Users/HP/AppData/Roaming/**)",
+      "Bash(cmd.exe /c \"where python\")",
+      "Bash(cmd.exe /c \"where winget\")",
+      "Bash(cmd.exe /c \"where choco\")",
+      "Bash(powershell.exe -NoProfile -Command 'Get-Command node -ErrorAction SilentlyContinue; Get-Command npm -ErrorAction SilentlyContinue; $env:PATH')",
+      "Bash(powershell.exe -NoProfile -Command \"Get-Command winget -ErrorAction SilentlyContinue; Get-Command choco -ErrorAction SilentlyContinue; Get-Command python -ErrorAction SilentlyContinue\")",
+      "Bash(curl -s http://localhost:3000/api/dashboard -o /dev/null -w \"%{http_code}\")",
+      "Read(//tmp/**)",
+      "Bash(powershell.exe -NoProfile -Command \"netstat -ano | findstr ':3000 :3001 :3002'\")",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git config *)",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(git push *)"
+    ]
+  }
+}
